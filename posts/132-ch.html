@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Website Title</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="https://msff.github.io/posts/132.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Portugal. The Man — Woodstock" />
+  <meta property="og:description"   content="Неделя выдалась богатой на релизы. Лучший, на мой взгляд, получился у Portugal. The Man." />
+  <meta property="og:image"         content="https://consequenceofsound.files.wordpress.com/2017/04/ptm_woodstock.jpg?quality=80&w=806&h=806" />
+</head>
+<body>
+<div class="page-header">
+  <h1>Share Dialog</h1>
+</div>
+
+<p>Click the button below to trigger a Share Dialog</p>
+
+<div id="shareBtn" class="btn btn-success clearfix">Share</div>
+
+<p style="margin-top: 50px">
+  <hr />
+  <a class="btn btn-small"  href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Share Dialog Documentation</a>
+</p>
+
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){});
+}
+</script>
+    
+</body>
+</html>
