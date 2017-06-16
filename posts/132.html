@@ -8,7 +8,7 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Portugal. The Man — Woodstock" />
   <meta property="og:description"   content="Неделя выдалась богатой на релизы. Лучший, на мой взгляд, получился у Portugal. The Man." />
-  <meta property="og:image"         content="https://consequenceofsound.files.wordpress.com/2017/04/ptm_woodstock.jpg" />
+  <meta property="og:image"         content="https://consequenceofsound.files.wordpress.com/2017/04/ptm_woodstock.jpg?quality=80&w=806&h=806" />
 </head>
 <body>
 <p>fuck that</p>
@@ -20,10 +20,28 @@
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  }(document, 'script', 'facebook-jssdk'));
+    </script>
 
   <!-- Your share button code -->
 <div class="fb-share-button" data-href="https://msff.github.io/posts/132.html" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmsff.github.io%2Fposts%2F132.html&amp;src=sdkpreparse">Share</a></div>
 
+    <div id="shareBtn" class="btn btn-success clearfix">Share</div>
+
+<p style="margin-top: 50px">
+  <hr />
+  <a class="btn btn-small"  href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Share Dialog Documentation</a>
+</p>
+
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'https://developers.facebook.com/docs/',
+  }, function(response){});
+}
+</script>
+    
 </body>
 </html>
