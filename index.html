@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript">
+function genericSocialShare(url){
+    window.open(url,'sharer','toolbar=0,status=0,width=648,height=395');
+    return true;
+}
+function FB.ui({
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/',
+}, function(response){});
+</script>
+<a href="javascript:void(0)" onclick="javascript:FB.ui">[Social Media Share Text/Image]</a>
+</body>
+</html>
